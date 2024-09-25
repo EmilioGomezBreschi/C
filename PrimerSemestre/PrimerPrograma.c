@@ -1,8 +1,0 @@
-/*programa en c hello world */
-
-#include <stdio.h>
-
-int main()
-{
-  return 0;
-}
