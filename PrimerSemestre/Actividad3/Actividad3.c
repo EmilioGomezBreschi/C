@@ -43,7 +43,10 @@ float modulo(float a, float b)
 {
   printf("---------------------------\n");
   printf("Calculando el módulo de %.2f y %.2f\n", a, b);
-  float resultado = fmod(a, b);
+  // convertir flotante a enteros
+  int aEntero = (int)a;
+  int bEntero = (int)b;
+  float resultado = aEntero % bEntero;
   return resultado;
 }
 
