@@ -4,18 +4,24 @@
 
 float suma(float a, float b)
 {
+  printf("---------------------------\n");
+  printf("Sumando %.2f + %.2f\n", a, b);
   float resultado = a + b;
   return resultado;
 }
 
 float resta(float a, float b)
 {
+  printf("---------------------------\n");
+  printf("Restando %.2f - %.2f\n", a, b);
   float resultado = a - b;
   return resultado;
 }
 
 float multiplicacion(float a, float b)
 {
+  printf("---------------------------\n");
+  printf("Multiplicando %.2f * %.2f\n", a, b);
   float resultado = a * b;
   return resultado;
 }
@@ -27,24 +33,35 @@ float division(float a, float b)
     printf("No se puede dividir entre 0\n");
     return 0;
   }
+  printf("---------------------------\n");
+  printf("Dividiendo %.2f / %.2f\n", a, b);
   float resultado = a / b;
   return resultado;
 }
 
 float modulo(float a, float b)
 {
+  printf("---------------------------\n");
+  printf("Calculando el módulo de %.2f y %.2f\n", a, b);
   float resultado = fmod(a, b);
   return resultado;
 }
 
 float potencia(float a, float b)
 {
-  float resultado = pow(a, b);
-  return resultado;
+  printf("---------------------------\n");
+  printf("Calculando %.2f elevado a %.2f\n", a, b);
+  for (int i = 0; i < b; i++)
+  {
+    a *= a;
+  }
+  return a;
 }
 
 void formulaCuadratica(float a, float b, float c)
 {
+  printf("---------------------------\n");
+  printf("Calculando la fórmula cuadrática para %.2fx^2 + %.2fx + %.2f\n", a, b, c);
   float discriminante = pow(b, 2) - 4 * a * c;
   if (discriminante < 0)
   {
@@ -55,6 +72,7 @@ void formulaCuadratica(float a, float b, float c)
   float x2 = (-b - sqrt(discriminante)) / (2 * a);
   printf("x1 = %.2f\n", x1);
   printf("x2 = %.2f\n", x2);
+  printf("---------------------------\n");
   printf("Presiona una tecla para continuar...");
   getchar();
   getchar();
@@ -131,6 +149,7 @@ int main()
     if (opcion != 7 && opcion != 8)
     {
       printf("Resultado: %.2f\n", resultado);
+      printf("---------------------------\n");
       printf("Presiona una tecla para continuar...");
       getchar();
       getchar();
