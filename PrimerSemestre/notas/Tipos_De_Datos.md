@@ -65,5 +65,3 @@ Además, puedes modificar el comportamiento de estos especificadores con los sig
    long num = 123456789L;
    printf("Número largo: %ld\n", num);  // Salida: 123456789
    ```
-
-Esta tabla cubre todos los especificadores estándar en C.
